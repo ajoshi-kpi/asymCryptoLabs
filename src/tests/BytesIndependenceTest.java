@@ -15,7 +15,7 @@ public class BytesIndependenceTest extends AbstractTest {
 
     @Override
     public boolean test() {
-        return calculateXi() < calculateDefaultXi();
+        return calculateXi() <= calculateDefaultXi();
     }
 
     @Override
