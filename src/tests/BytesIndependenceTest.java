@@ -15,6 +15,9 @@ public class BytesIndependenceTest extends AbstractTest {
 
     @Override
     public boolean test() {
+        System.out.println("BytesIndependenceTest: ");
+        System.out.println("Xi = " + calculateXi());
+        System.out.println("Xi(default) = " + calculateDefaultXi());
         return calculateXi() <= calculateDefaultXi();
     }
 

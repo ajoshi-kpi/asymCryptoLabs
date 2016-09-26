@@ -29,6 +29,9 @@ public class BytesUniformityTest extends AbstractTest {
 
     @Override
     public boolean test() {
+        System.out.println("BytesUniformityTest: ");
+        System.out.println("Xi = " + calculateXi());
+        System.out.println("Xi(default) = " + calculateDefaultXi());
         return calculateXi() <= calculateDefaultXi();
     }
 
