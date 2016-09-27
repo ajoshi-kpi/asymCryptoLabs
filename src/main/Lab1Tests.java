@@ -10,9 +10,9 @@ import java.util.List;
 public class Lab1Tests implements Runnable {
     @Override
     public void run() {
-        ListFileInputHelper fileHelper = new ListFileInputHelper("DefaultGenerator.txt");
+        ListFileInputHelper fileHelper = new ListFileInputHelper("LehmerLow.txt");
         final double alpha = 0.01;
-        final int r = 100;
+        final int r = 32;
 
         List<Integer> bytes = fileHelper.readFromFile();
         System.out.println(new BytesEquabilityTest(bytes, alpha).test());

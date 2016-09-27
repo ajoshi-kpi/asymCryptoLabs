@@ -33,8 +33,14 @@ public class BytesIndependenceTest extends AbstractTest {
                         statistics.getFirstPlaceFrequencies().get(i) : 0;
                 int secondByteFreq = statistics.getSecondPlaceFrequencies().get(j) != null ?
                         statistics.getSecondPlaceFrequencies().get(j) : 0;
-                if (i != 0 && j != 0) {
-                    xi += Math.pow(pairFreq, 2.0) / (firstPlaceFreq * secondByteFreq);
+                if (pairFreq != 0) {
+                    double currentXi = Math.pow(pairFreq, 2.0) / (firstPlaceFreq * secondByteFreq);
+                    if(currentXi == 0) {
+                        System.out.println(pairFreq);
+                        System.out.println(firstPlaceFreq);
+                        System.out.println(secondByteFreq);
+                    }
+                    xi += currentXi;
                 }
             }
         }

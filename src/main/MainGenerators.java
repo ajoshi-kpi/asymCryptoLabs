@@ -25,7 +25,7 @@ public class MainGenerators {
     public static void main(String[] args) {
 
 //        new Thread(new Lab1Generators(new DefaultGenerator(), 1000000)).start();
-//        new Thread(new Lab1Generators(new LehmerLow(20061996), 1000000)).start();
+        new Thread(new Lab1Generators(new LehmerLow(20061996), 1000000)).start();
 //        new Thread(new Lab1Generators(new LehmerHigh(20061996), 1000000)).start();
 //        new Thread(new Lab1Generators(new L20Generator(L20_INITIAL_STATE), 1000000)).start();
 //        new Thread(new Lab1Generators(new L89Generator(L89_INITIAL_STATE), 1000000)).start();

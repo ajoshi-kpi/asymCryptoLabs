@@ -13,9 +13,11 @@ public class BytesEquabilityTest extends AbstractTest {
     @Override
     public boolean test() {
         System.out.println("BytesEquabilityTest: ");
-        System.out.println("Xi = " + calculateXi());
-        System.out.println("Xi(default) = " + calculateDefaultXi());
-        return calculateXi() <= calculateDefaultXi();
+        double xi = calculateXi();
+        double defaultXi = calculateDefaultXi();
+        System.out.println("Xi = " + xi);
+        System.out.println("Xi(default) = " + defaultXi);
+        return xi <= defaultXi;
     }
 
     @Override

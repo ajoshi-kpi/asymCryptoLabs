@@ -21,10 +21,11 @@ public class BytesUniformityTest extends AbstractTest {
         double xi = 0.0;
         for (int i = 0; i < 255; i++) {
             for (List<Integer> segment : getSegments()) {
-                xi += Math.pow(countOccurences(segment, i), 2.0) / ((countOccurences(BYTES, i)) * m);
+                double currentXi = Math.pow(countOccurences(segment, i), 2.0) / (countOccurences(BYTES, i));
+                xi += currentXi;
             }
         }
-        return BYTES.size() * (xi - 1);
+        return BYTES.size() * (xi / m - 1);
     }
 
     @Override

@@ -18,6 +18,6 @@ public class LehmerLow extends LehmerGenerator implements Generator {
     private int getLowBites(long value, int bitesNumber) {
         String binaryString = Long.toBinaryString(value);
         binaryString = binaryString.substring(binaryString.length() - bitesNumber);
-        return getNumberFromBinaryString(binaryString);
+        return Integer.parseInt(binaryString, 2);
     }
 }
