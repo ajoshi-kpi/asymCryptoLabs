@@ -18,9 +18,9 @@ abstract class AbstractTest implements Test {
     }
 
     private void initQuantils() {
-        quantils.put(0.01, 3.715);
-        quantils.put(0.05, 3.315); // TODO QUANTILE VALUE
-        quantils.put(0.1, 3.09);
+        quantils.put(0.01, 2.32);
+        quantils.put(0.05, 1.645); // TODO QUANTILE VALUE
+        quantils.put(0.1, 1.26);
     }
 
     abstract protected double calculateXi();
