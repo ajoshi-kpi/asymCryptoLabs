@@ -10,7 +10,7 @@ public class MainConverter {
         FileHelper fileHelper = new FileHelper("DefaultGenerator.txt");
         String result = fileInputHelper.readFromFile();
         for (int i = 0; i < result.length() / 8; i++) {
-            fileHelper.write(NumberConverter.getNumberFromBinaryString(result.substring(i, i + 8)));
+            fileHelper.write(NumberConverter.getNumberFromBinaryString(result.substring(i * 8, i * 8 + 8)));
             fileHelper.newLine();
         }
     }
